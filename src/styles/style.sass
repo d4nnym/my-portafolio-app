@@ -1,0 +1,22 @@
+@import "resets.sass"
+@import "variables.sass"
+
+/*Styles*/  
+$background-dark:$dark-blue-0
+$background-light:$light-1
+
+/*Mixins*/
+@mixin display-flex
+  display: flex
+  display: -webkit-box
+  display: -webkit-flex
+  display: -moz-box
+
+.container-body
+  height: 100vh
+  padding-top: 80px
+  &.dark-theme
+    background-color: $background-dark
+  &.light-theme
+    background-color: $background-light  
+
