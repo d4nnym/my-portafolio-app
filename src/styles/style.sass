@@ -1,6 +1,9 @@
 @import "resets.sass"
 @import "variables.sass"
 
+h1
+  font-size: $size-1
+
 /*Styles*/  
 $background-dark:$dark-blue-0
 $background-light:$light-1
@@ -11,12 +14,29 @@ $background-light:$light-1
   display: -webkit-box
   display: -webkit-flex
   display: -moz-box
-
+  
 .container-body
-  height: 100vh
-  padding-top: 80px
+  @include display-flex
+  justify-content: center
+  width: 100% 
+  height: 100%
+  padding-top: $size-0
   &.dark-theme
     background-color: $background-dark
   &.light-theme
-    background-color: $background-light  
+    background-color: $background-light
 
+:root
+  background-color: $background-light      
+
+.main
+  width: $large
+  padding: $size-3
+
+@media (max-width:$large)
+  .main
+    width: 100%
+
+@media (max-width:$mobile)
+  h1
+    font-size: $size-3
