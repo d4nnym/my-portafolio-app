@@ -1,10 +1,7 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
-
-
 export default function Nav({isOpen,handleMenu}){
-
   return(
     <div className={"menu "+(!isOpen?"hide":"show")}>
       <ul className="nav">
@@ -20,6 +17,5 @@ export default function Nav({isOpen,handleMenu}){
       </ul>
     </div>
   );
-}
 
 //onMouseLeave={isOpen?handleMenu:null}

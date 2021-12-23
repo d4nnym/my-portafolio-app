@@ -1,7 +1,5 @@
 import React from 'react'
-
 export default function Burger({handleMenu}){
-  
   return(
     <button 
       className="btn-menu" 

@@ -10,7 +10,7 @@ export default function Header ({theme}) {
   const handleMenu = ()=>{
     setOpen(!isOpen)
   }
-
+  
   return(
   <header className={"header "+theme}>
     <div className="navbar">
