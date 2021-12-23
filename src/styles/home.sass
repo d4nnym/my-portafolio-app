@@ -1,0 +1,90 @@
+@import "style.sass"
+
+.presentation
+  @include display-flex
+  align-items: center
+  justify-content: space-between
+
+.information
+  display: inherit
+  flex-flow: column wrap
+  .presentation-text
+    line-height:130%
+    font-size:$size-4 
+    span
+      font-weight:500
+
+.media-content
+  @include display-flex
+  align-items: center
+  .social
+    padding: $size-7
+    border-radius: 50%
+    margin: $size-8 0 $size-8 0 
+    &:hover
+      opacity: 0.8
+      transition: background-color .2s linear
+    img
+      display: inline
+      vertical-align: middle
+      padding:$size-9
+      width: $size-4
+  .img-profile
+      img
+        height:240px
+        border-radius: 50%
+        margin: 0 $size-5 0 $size-5
+
+.light-theme
+  .information
+    .title
+        color: $light-blue-0
+    .presentation-text     
+      color: $gray-0
+      span
+        color:$light-yellow-0
+  .media-content
+    .social
+      &:hover
+        background-color:$light-3
+       
+
+@media (max-width:$tablet)
+  .presentation 
+    flex-flow: column
+    justify-content: center
+
+  .information
+    flex-flow: column wrap
+    align-items: center
+    order:1
+    .title
+      margin-bottom: $size-8
+    .presentation-text
+      font-size:$size-5  
+
+  .media-content
+    flex-flow: column wrap
+    .list-social
+      @include display-flex
+      flex-flow: row nowrap
+      background-color: none
+    .social
+      padding: $size-7
+      margin: $size-7 
+      img
+        width: $size-3
+    .img-profile
+      img
+        height:240px
+         
+@media (max-width:$mobile)
+  .presentation-text
+    font-size:$size-5
+  
+  .img-profile
+    img
+      height:240px
+
+  
+    
