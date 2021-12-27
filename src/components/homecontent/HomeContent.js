@@ -5,7 +5,7 @@ import MediaContent from './MediaContent'
 export default function Home(){
   
   return(
-    <section id="content" className="">
+    <section id="home-presentation" className="home-presentation">
       <div className="presentation">
         <Presentation />
         <MediaContent />

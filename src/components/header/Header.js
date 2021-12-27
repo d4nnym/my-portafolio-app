@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Burger from './Burger'
 import Nav from './Nav'
-import {media} from '../MediaExports' 
+import {digitalMedia} from '../../service/DigitalMedia' 
 
 export default function Header ({theme}) {
 
@@ -15,7 +15,7 @@ export default function Header ({theme}) {
   <header className={"header "+theme}>
     <div className="navbar">
       <a className="brand" href="/">
-        <img className="img-brand" src={media.isotype.src} title={media.isotype.title} alt={media.isotype.alt} />
+        <img className="img-brand" src={digitalMedia.isotype.src} title={digitalMedia.isotype.title} alt={digitalMedia.isotype.alt} />
       </a>
       <Nav isOpen={isOpen} handleMenu={handleMenu} />
       <Burger handleMenu={handleMenu} />  

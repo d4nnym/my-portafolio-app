@@ -8,7 +8,7 @@ export default function Presentation(){
         <h1>Danny Matute</h1>
       </div>
       <div className="presentation-text">
-        <p>Soy <span>desarrollador Frontend</span> con una gran pasión por la experiencia de usuario. Tengo un gran afán por el diseño web y me gusta crear diseños creativos, interactivos y funcionales.</p>
+        <p>Soy <span>desarrollador Frontend</span> con conocimeintos en UX, maquetación y desarrollo web. Me apasiona el diseño web, me gusta crear diseños creativos, interactivos y funcionales.</p>
       </div>
     </div>
   );

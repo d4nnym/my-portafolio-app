@@ -1,20 +1,43 @@
 @import "resets.sass"
 @import "variables.sass"
 
-h1
-  font-size: $size-1
-
-/*Styles*/  
+/********************/
+/*      Variables   */
+/********************/  
 $background-dark:$dark-blue-0
 $background-light:$light-1
 
-/*Mixins*/
+/********************/
+/*      Mixin       */
+/********************/
 @mixin display-flex
   display: flex
   display: -webkit-box
   display: -webkit-flex
   display: -moz-box
-  
+
+/********************/
+/*      General     */
+/********************/
+
+:root
+  background-color: $background-light 
+    
+h1
+  font-size: $size-1
+h2
+  font-size: $size-3
+h3
+  font-size: $size-4
+h4
+  font-size: $size-5
+h5
+  font-size: $size-6
+h6
+  font-size: $size-7
+small
+  font-size: $size-8
+
 .container-body
   @include display-flex
   justify-content: center
@@ -26,12 +49,13 @@ $background-light:$light-1
   &.light-theme
     background-color: $background-light
 
-:root
-  background-color: $background-light      
-
 .main
   width: $large
   padding: $size-3
+    
+/********************/
+/*  Media queries   */
+/********************/
 
 @media (max-width:$large)
   .main

@@ -5,8 +5,14 @@ import svgTwitter from '../assets/svg/twitter.svg'
 import svgGithub from '../assets/svg/github.svg'
 import svgGmail from '../assets/svg/gmail.svg'
 import svgCodepen from '../assets/svg/codepen.svg'
+import svgReact from '../assets/svg/react.svg'
+import svgNode from '../assets/svg/nodejs.svg'
+import svgAdobeXD from '../assets/svg/adobexd.svg'
+import svgRow from '../assets/svg/row.svg'
+import svgMySQL from '../assets/svg/mysql.svg'
+import svgIllustrator from '../assets/svg/illustrator.svg'
 
-export const media ={
+export const digitalMedia ={
   isotype:{
     src:svgIsotype,
     title:"Isotype Danny",
@@ -46,5 +52,29 @@ export const media ={
     title:"to Danny's Codepen",
     alt:"codepen-danny",
     href:"https://codepen.io/d4nnym"
+  },
+  react:{
+    src:svgReact,
+    title:"ReactJS",
+    alt:"reactjs"
+  },
+  nodejs:{
+    src:svgNode,
+    title:"NodeJS",
+    alt:"nodejs"
+  },
+  adobexd:{
+    src:svgAdobeXD,
+    title:"AdobeXD",
+    alt:"adobexd"
+  },
+  row:{
+    src:svgRow
+  },
+  mysql:{
+    src:svgMySQL
+  },
+  illustrator:{
+    src: svgIllustrator
   }
 }

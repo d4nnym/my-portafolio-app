@@ -1,5 +1,8 @@
 @import "style.sass"
 
+/*************************************/
+/*        Section Presentation       */
+/*************************************/
 .presentation
   @include display-flex
   align-items: center
@@ -17,24 +20,125 @@
 .media-content
   @include display-flex
   align-items: center
-  .social
+  .website
     padding: $size-7
     border-radius: 50%
     margin: $size-8 0 $size-8 0 
     &:hover
       opacity: 0.8
+      background-color: $light-2
       transition: background-color .2s linear
     img
       display: inline
       vertical-align: middle
       padding:$size-9
       width: $size-4
+      height: $size-4
   .img-profile
       img
         height:240px
         border-radius: 50%
         margin: 0 $size-5 0 $size-5
 
+/*************************************/
+/*        Section Project            */
+/*************************************/
+
+.work-home
+  padding-top: $size-3
+
+.card-container 
+  position: relative
+  padding: 0 $size-5 0 $size-5
+  .overflow-cards    
+    overflow-x: hidden
+    padding: $size-5
+  .action-overflow
+    position: absolute
+    top: calc(50% - #{$size-6}) 
+    padding:$size-7
+    border-radius: 50%
+    background-color: $light-3
+    opacity: 0.8 
+    &:hover
+      opacity: 1
+      transition: opacity .5s
+    &:focus
+      opacity: 1
+      transition: opacity .5s
+    &.back
+      left: 0
+    &.next
+      transform: rotate(180deg) 
+      right: 0
+    span
+      display: inline-block
+      background-image: url("../assets/svg/row.svg")
+      background-repeat: no-repeat
+      background-position: center
+      vertical-align: middle
+      background-size: 100%
+      height: $size-5
+      width: $size-5
+          
+.works-card
+  @include display-flex
+  position: relative
+  width: max-content
+  transition: .7s ease-in-out 
+  .work-card
+    height: 240px
+    width: 240px
+    margin-right: $size-5
+    border: 1px solid $light-blue-1
+    border-radius: $size-7
+    padding:$size-4 $size-5 $size-4 $size-5
+    background-color: $light-1
+    box-shadow: $shadow-3
+    transition: .2s ease-in-out
+    &:hover
+      transform: scale(1.1)
+
+.work-body
+  @include display-flex
+  height: 100%
+  width: 100%
+  &.vertical-card
+    flex-flow: wrap
+    align-content: space-between  
+  .work-information
+    line-height:120%
+    p
+      color:$dark-blue-1
+      font-size: $size-6
+  .footer
+    width: 100%    
+    .work-header
+      margin-top: $size-7
+      h4
+        font-weight: bold
+        color:$light-blue-0
+      h5
+        color:$gray-0      
+    .work-footer
+      @include display-flex
+      justify-content: space-between
+      margin-top: $size-7
+      img
+        margin-right: $size-9
+        height: $size-5
+      .work-link
+        background-color: $light-blue-0
+        padding: 4px 32px
+        border-radius: 4px
+        font-weight: bold
+        color:$light-1
+        &:hover
+          opacity: .8    
+
+/*************************************/
+/*              Themes               */
+/*************************************/ 
 .light-theme
   .information
     .title
@@ -42,13 +146,18 @@
     .presentation-text     
       color: $gray-0
       span
-        color:$light-yellow-0
+        color:$light-yellow-3
   .media-content
     .social
       &:hover
         background-color:$light-3
-       
+  .work-home
+    .title
+      color: $gray-1
 
+/*************************************/
+/*           Media queries           */
+/*************************************/
 @media (max-width:$tablet)
   .presentation 
     flex-flow: column
@@ -65,7 +174,7 @@
 
   .media-content
     flex-flow: column wrap
-    .list-social
+    .website-list
       @include display-flex
       flex-flow: row nowrap
       background-color: none
@@ -85,6 +194,10 @@
   .img-profile
     img
       height:240px
+  .work-card
+    height: 232px
+    width: 232px
 
-  
-    
+  .card-container
+    padding: 0 $size-6 0 $size-6 
+/// scroll-behavior: smooth

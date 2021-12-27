@@ -1,14 +1,14 @@
 import React from 'react'
-import SocialNetworks from './SocialNetworks'
-import {media} from '../MediaExports'
+import Websites from './Websites'
+import {digitalMedia} from '../../service/DigitalMedia'
 
 export default function MediaContent(){
   return (
     <div className="media-content">
       <div className="img-profile">
-        <img src={media.profile.src} title={media.profile.title} alt={media.profile.alt}/>
+        <img src={digitalMedia.profile.src} title={digitalMedia.profile.title} alt={digitalMedia.profile.alt}/>
       </div>
-      <SocialNetworks />
+      <Websites />
     </div>
   )
 }

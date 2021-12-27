@@ -12,10 +12,11 @@ export default function Nav({isOpen,handleMenu}){
           <NavLink onClick={isOpen?handleMenu:null} to="/about-me">Sobre mi</NavLink>
         </li> 
         <li className="nav-item">
-          <NavLink onClick={isOpen?handleMenu:null} to="/work">Mi Trabajo</NavLink>
+          <NavLink onClick={isOpen?handleMenu:null} to="/work">Mis Proyectos</NavLink>
         </li> 
       </ul>
     </div>
   );
+}
 
 //onMouseLeave={isOpen?handleMenu:null}
