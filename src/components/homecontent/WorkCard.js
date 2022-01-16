@@ -10,7 +10,7 @@ export default function WorkCard({project}){
       </div>
       <div className="footer">
         <div className="work-header">
-          <h4>{project.title}</h4>
+          <h4>{project.title}<small> | {project.type}</small></h4>
           <h5>{project.subtitle}</h5>
         </div>
         <WorkFooter toolMedia={project.media} hrefProject={project.href}/>

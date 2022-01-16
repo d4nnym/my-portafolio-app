@@ -3,6 +3,7 @@
 /*************************************/
 /*        Section Presentation       */
 /*************************************/
+  
 .presentation
   @include display-flex
   align-items: center
@@ -16,6 +17,24 @@
     font-size:$size-4 
     span
       font-weight:500
+        
+.call-action
+  margin-top: 16px
+  .action-link
+    float: left
+    margin-right: 16px
+    border-radius: 8px
+    padding: 8px 32px 8px 32px
+    &:hover
+      opacity: 0.8 
+    &.primary
+      background-color: $light-blue-0
+      color: $light-1
+      border: $light-blue-0 solid 2px
+    &.secondary
+      color: $gray-1
+      background-color: $light-1       
+      border: $light-blue-1 solid 2px
 
 .media-content
   @include display-flex
@@ -44,7 +63,7 @@
 /*        Section Project            */
 /*************************************/
 
-.work-home
+.work-home, .about-me
   padding-top: $size-3
 
 .card-container 
@@ -118,6 +137,8 @@
       h4
         font-weight: bold
         color:$light-blue-0
+        small 
+          color: $gray-0
       h5
         color:$gray-0      
     .work-footer
@@ -137,6 +158,44 @@
           opacity: .8    
 
 /*************************************/
+/*        Section About me           */
+/*************************************/
+.about-me
+  .container-summary
+    padding: $size-5 0 
+    .summary
+      font-size: 16px
+      line-height:130%
+      color: $gray-0
+      span
+        font-weight: bold
+        color: $light-blue-0  
+
+.tools-section
+  @include display-flex
+  align-items: center
+  margin-top: 16px
+  color: $gray-0
+  h4
+    font-weight: bold
+    
+
+.tool-list
+  @include display-flex
+  flex-flow: row wrap
+  margin-left: 16px
+  
+.tool-item
+  display: inherit
+  padding-right: 16px
+  align-items: center  
+  img
+    display: block
+    padding: 2px
+    width: 24px
+
+
+/*************************************/
 /*              Themes               */
 /*************************************/ 
 .light-theme
@@ -146,12 +205,12 @@
     .presentation-text     
       color: $gray-0
       span
-        color:$light-yellow-3
+        color:$light-blue-0
   .media-content
     .social
       &:hover
         background-color:$light-3
-  .work-home
+  .work-home, .about-me
     .title
       color: $gray-1
 
@@ -170,7 +229,10 @@
     .title
       margin-bottom: $size-8
     .presentation-text
-      font-size:$size-5  
+      font-size:$size-5 
+    .call-action
+      width: 100%
+      text-align: center     
 
   .media-content
     flex-flow: column wrap
@@ -186,7 +248,21 @@
     .img-profile
       img
         height:240px
-         
+
+  .call-action
+    .action-link
+      float: auto
+      margin-bottom: 8px
+      width: 100%
+
+  .tools-section
+    flex-direction: column
+    align-items: start
+
+  .tool-list
+    margin: 0   
+      
+
 @media (max-width:$mobile)
   .presentation-text
     font-size:$size-5
@@ -200,4 +276,5 @@
 
   .card-container
     padding: 0 $size-6 0 $size-6 
+
 /// scroll-behavior: smooth

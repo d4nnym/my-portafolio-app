@@ -18,5 +18,4 @@ export default function Nav({isOpen,handleMenu}){
     </div>
   );
 }
-
 //onMouseLeave={isOpen?handleMenu:null}

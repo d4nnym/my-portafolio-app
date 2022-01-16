@@ -11,6 +11,12 @@ import svgAdobeXD from '../assets/svg/adobexd.svg'
 import svgRow from '../assets/svg/row.svg'
 import svgMySQL from '../assets/svg/mysql.svg'
 import svgIllustrator from '../assets/svg/illustrator.svg'
+import svgSass from '../assets/svg/sass.svg'
+import  svgJavaScript from '../assets/svg/javascript.svg'
+import svgHtml from '../assets/svg/html.svg'
+import svgAngular from '../assets/svg/angular.svg'
+import svgElectron from '../assets/svg/electron.svg'
+import pdfCV from '../assets/file/cv.pdf'
 
 export const digitalMedia ={
   isotype:{
@@ -72,9 +78,41 @@ export const digitalMedia ={
     src:svgRow
   },
   mysql:{
-    src:svgMySQL
+    src:svgMySQL,
+    title:"MySQL",
+    alt:"mysql"
   },
   illustrator:{
-    src: svgIllustrator
+    src: svgIllustrator,
+    title:"Adobe Illustrator",
+    alt:"adobe-illustrator"
+  },
+  sass:{
+    src: svgSass,
+    title: "Sass",
+    alt:"sass"
+  },
+  javascript:{
+    src: svgJavaScript,
+    title: "JavaScript",
+    alt:"javascript"
+  },
+  html:{
+    src: svgHtml,
+    title: "HTML",
+    alt:"htlm"
+  },
+  angular:{
+    src:svgAngular,
+    title:"Angular",
+    alt:"angular"
+  },
+  electron:{
+    src:svgElectron,
+    title:"Electron",
+    alt:"electron"
+  },
+  cv:{
+    href:pdfCV
   }
 }

@@ -106,19 +106,19 @@
     display: inline-block
 
   .menu
-    position: fixed
+    position: absolute
     top:0
     left: 0
     margin:0
     padding: 0
     height: 100vh
     width: 100%
+    
+    transition: .3s ease-in-out
     &.show
-      display: block
-      animation: menuAnimation .3s linear
+      transform: translateX(0)
     &.hide
-      left:-100vw
-      animation: menuAnimationReverse .3s linear
+      transform: translateX(-100vw)
     .nav
       @include display-flex
       flex-flow: column wrap
@@ -127,17 +127,6 @@
       .nav-item
         margin-top:$size-3
 
-@keyframes menuAnimation
-  from
-    left: -100vw
-  to  
-    left:0
-
-@keyframes menuAnimationReverse
-  from
-    left: 0
-  to  
-    left:-100vw
-    display: none
 /*top: unquote("calc(50% + 40px)")*/
 
+/// qwertyuiopñllkjhgfdssazxcvbnm,,.-

@@ -10,12 +10,16 @@ export default function Header ({theme}) {
   const handleMenu = ()=>{
     setOpen(!isOpen)
   }
-  
+
   return(
   <header className={"header "+theme}>
     <div className="navbar">
       <a className="brand" href="/">
-        <img className="img-brand" src={digitalMedia.isotype.src} title={digitalMedia.isotype.title} alt={digitalMedia.isotype.alt} />
+        <img 
+        className="img-brand" 
+        src={digitalMedia.isotype.src} 
+        title={digitalMedia.isotype.title} 
+        alt={digitalMedia.isotype.alt} />
       </a>
       <Nav isOpen={isOpen} handleMenu={handleMenu} />
       <Burger handleMenu={handleMenu} />  
