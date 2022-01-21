@@ -1,6 +1,6 @@
 import React from 'react'
 import Websites from './Websites'
-import {digitalMedia} from '../../service/DigitalMedia'
+import {digitalMedia} from '../../data/json/DigitalMedia'
 
 export default function MediaContent(){
   return (

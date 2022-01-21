@@ -1,8 +1,8 @@
 import React, {useState,useEffect} from 'react'
 import WorkCard from './WorkCard'
 import CardControl from './CardControl'
-import {works} from '../../service/WorkExports'
-import {mediaQueries} from '../../service/MediaQueries'
+import {works} from '../../data/json/WorkExports'
+import {mediaQueries} from '../../data/json/MediaQueries'
 
 export default function WorksHome(){
   
@@ -20,7 +20,6 @@ export default function WorksHome(){
     }
   })
 
-  const [width,setWidth] = useState(0)
   const [translate,setTranslate] = useState(0)
   const [iterator,setIterator] = useState(calcIterator(window.innerWidth))
   const [size,setSize] = useState(0)
@@ -29,10 +28,6 @@ export default function WorksHome(){
     transform: "translate("+translate+"px)"
   } 
   
-  useEffect(()=>{
-    window.addEventListener("resize", handleResize);
-  });
-
   const next = (()=>{
     setTranslate(translate-(256*iterator));
     setSize(size+iterator);
@@ -44,8 +39,11 @@ export default function WorksHome(){
   });
  
   const handleResize = (()=>{
-    setWidth(window.innerWidth);
-    setIterator(calcIterator(width));      
+    setIterator(calcIterator(window.innerWidth));      
+  });
+
+  useEffect(()=>{
+    window.addEventListener("resize", handleResize);
   });
 
   const worksList = works.map((project)=>

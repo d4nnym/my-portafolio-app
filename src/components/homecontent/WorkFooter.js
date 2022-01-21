@@ -1,5 +1,5 @@
 import React from 'react' 
-import {digitalMedia} from '../../service/DigitalMedia'
+import {digitalMedia} from '../../data/json/DigitalMedia'
 
 export default function WorkFooter({toolMedia,hrefProject}){
   

@@ -1,5 +1,5 @@
 import React from 'react'
-import { digitalMedia } from '../../service/DigitalMedia'; 
+import { digitalMedia } from '../../data/json/DigitalMedia'; 
 
 export default function Presentation(){
 
@@ -21,7 +21,7 @@ export default function Presentation(){
           className="action-link secondary"
           rel="noopener noreferrer" 
           target="_blank">
-          <h4>Ver mi CV</h4>
+          <h4>Resumen</h4>
         </a>
       </div>
     </div>

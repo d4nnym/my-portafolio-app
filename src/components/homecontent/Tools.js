@@ -1,9 +1,9 @@
 import React from 'react'
-import { digitalMedia } from '../../service/DigitalMedia'; 
+import { digitalMedia } from '../../data/json/DigitalMedia'; 
 
 export default function Tools(){
   const design = ["adobexd","illustrator"];
-  const developer = ["react", "sass","angular", "electron","illustrator"]
+  const developer = ["react", "sass","nodejs","mysql"]
   
   const listDev = developer.map((dev)=>
     <li key={dev} className="tool-item">
@@ -28,13 +28,13 @@ export default function Tools(){
   return(
     <div className="tools-media">
       <div className="tools-section"> 
-        <h4>Herramientas de desarrollo: </h4>
+        <h4>Desarrollo: </h4>
         <ul className="tool-list">
           {listDev}
         </ul>
       </div>
       <div className="tools-section">
-        <h4>Herramientas de diseño: </h4>
+        <h4>Diseño </h4>
         <ul className="tool-list">
           {listDesign}
         </ul>

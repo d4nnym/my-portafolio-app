@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Burger from './Burger'
 import Nav from './Nav'
-import {digitalMedia} from '../../service/DigitalMedia' 
+import {digitalMedia} from '../../data/json/DigitalMedia'  
 
 export default function Header ({theme}) {
 
