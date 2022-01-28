@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Burger from './Burger'
 import Nav from './Nav'
+import {NavLink} from 'react-router-dom'
 import {digitalMedia} from '../../data/json/DigitalMedia'  
 
 export default function Header ({theme}) {
@@ -14,13 +15,13 @@ export default function Header ({theme}) {
   return(
   <header className={"header "+theme}>
     <div className="navbar">
-      <a className="brand" href="/">
+      <NavLink className="brand" to="/">
         <img 
         className="img-brand" 
         src={digitalMedia.isotype.src} 
         title={digitalMedia.isotype.title} 
         alt={digitalMedia.isotype.alt} />
-      </a>
+      </NavLink>
       <Nav isOpen={isOpen} handleMenu={handleMenu} />
       <Burger handleMenu={handleMenu} />  
     </div>    

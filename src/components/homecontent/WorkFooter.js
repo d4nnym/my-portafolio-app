@@ -1,4 +1,5 @@
-import React from 'react' 
+import React from 'react'
+import {NavLink} from 'react-router-dom' 
 import {digitalMedia} from '../../data/json/DigitalMedia'
 
 export default function WorkFooter({toolMedia,hrefProject}){
@@ -13,9 +14,11 @@ export default function WorkFooter({toolMedia,hrefProject}){
 
   return (
     <div className="work-footer">
-      <a className="work-link" href={hrefProject}>
+      <NavLink 
+        className="work-link" 
+        to={hrefProject}>
         <h5>Ver más</h5>
-      </a>
+      </NavLink>
       <div className="tool-media">
         {mediaList}
       </div>

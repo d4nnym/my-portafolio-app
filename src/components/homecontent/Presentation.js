@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 import { digitalMedia } from '../../data/json/DigitalMedia'; 
 
 export default function Presentation(){
@@ -12,10 +13,11 @@ export default function Presentation(){
         <p>Desarrollador Frontend con conocimientos en <span>React y Prototipado</span>, especializado en diseño UX con experiencia en diseño web. Me gusta crear diseños creativos, interactivos y funcionales.</p>
       </div>
       <div className="call-action">
-        <a 
-          href="/work" className="action-link primary">
+        <NavLink 
+          to="/work" 
+          className="action-link primary">
           <h4>Ver proyectos</h4>
-        </a>
+        </NavLink>
         <a 
           href={digitalMedia.cv.href} 
           className="action-link secondary"
