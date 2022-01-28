@@ -2,7 +2,7 @@
   "name": "my-portafolio-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://d4nnym.github.io/",
+  "homepage": "http://d4nnym.github.io/my-portafolio-app",
   "dependencies": {
     "@mdx-js/react": "^1.6.22",
     "@testing-library/jest-dom": "^5.15.1",
