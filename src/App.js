@@ -6,6 +6,7 @@ import WorksHome from './components/homecontent/WorksHome'
 import AboutMe from './components/homecontent/AboutMe'
 import WorkPage from './pages/WorksPage'
 import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
 
 export default function App() {
   return(
@@ -14,10 +15,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage theme="dark"/>}>
             <Route path="/" element={<WorksHome />} /> 
-            <Route path="/about-me" element={<AboutMe />} />  
+            <Route path="/about-me" element={<AboutMe />} exact />  
           </Route>
           <Route path="/work" element={<WorkPage theme="light"/>} />
         </Routes>
+      <Footer />
     </div>
   );  
 }

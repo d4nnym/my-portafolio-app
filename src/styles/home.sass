@@ -19,12 +19,12 @@
       font-weight:500
         
 .call-action
-  margin-top: 16px
+  margin-top: $size-5
   .action-link
     float: left
-    margin-right: 16px
-    border-radius: 8px
-    padding: 8px 32px 8px 32px
+    margin-right: $size-5
+    border-radius: $size-7
+    padding: $size-7 $size-3 $size-7 $size-3
     &:hover
       opacity: 0.8 
     &.primary
@@ -39,25 +39,38 @@
 .media-content
   @include display-flex
   align-items: center
-  .website
+.media-footer
+  @include display-flex
+  align-items: center
+  flex-flow: column wrap
+  .website-list
+    @include display-flex
+    flex-flow: row nowrap
+    background-color: none
+  .social
     padding: $size-7
-    border-radius: 50%
-    margin: $size-8 0 $size-8 0 
-    &:hover
-      opacity: 0.8
-      background-color: $light-2
-      transition: background-color .2s linear
+    margin: $size-7 
     img
-      display: inline
-      vertical-align: middle
-      padding:$size-9
-      width: $size-4
-      height: $size-4
-  .img-profile
-      img
-        height:240px
-        border-radius: 50%
-        margin: 0 $size-5 0 $size-5
+      width: $size-3
+.website
+  padding: $size-7
+  border-radius: 50%
+  margin: $size-8 0 $size-8 0 
+  &:hover
+    opacity: 0.8
+    background-color: $light-2
+    transition: background-color .2s linear
+  img
+    display: inline
+    vertical-align: middle
+    padding:$size-9
+    width: $size-4
+    height: $size-4
+.img-profile
+    img
+      height:240px
+      border-radius: 50%
+      margin: 0 $size-5 0 $size-5
 
 /*************************************/
 /*        Section Project            */
@@ -150,8 +163,8 @@
         height: $size-5
       .work-link
         background-color: $light-blue-0
-        padding: 4px 32px
-        border-radius: 4px
+        padding: $size-8 $size-3
+        border-radius: $size-8
         font-weight: bold
         color:$light-1
         &:hover
@@ -162,38 +175,50 @@
 /*************************************/
 .about-me
   .container-summary
-    padding: $size-5 0 
-    .summary
-      font-size: 16px
-      line-height:130%
-      color: $gray-0
+    padding: $size-5 0
+    .title
+      margin: $size-5
+    span
+      font-weight: bold
+      color: $light-blue-0  
+
+.skills-card
+  @include display-flex
+  justify-content: center
+  flex-wrap: wrap
+  .skill
+    position: relative
+    margin: $size-3 48px
+
+.skill-card
+  @include display-flex
+  justify-content: center
+  width: 286px
+  .card-media
+    @include display-flex
+    justify-content: center
+    padding: $size-3
+    box-shadow: $shadow-2
+    width: 296px
+    height: 480px
+    border-radius: 8px
+    img
+      height: 120px
+      width: 120px
+  .card-information
+    position: absolute
+    width: 360px
+    height: 256px
+    bottom: $size-3
+    padding: $size-3
+    box-shadow: $shadow-2
+    background-color: $light-blue-0
+    border-radius: $size-7
+    p
+      color: $light-1
       span
         font-weight: bold
-        color: $light-blue-0  
-
-.tools-section
-  @include display-flex
-  align-items: center
-  margin-top: 16px
-  color: $gray-0
-  h4
-    font-weight: bold
-    
-
-.tool-list
-  @include display-flex
-  flex-flow: row wrap
-  margin-left: 16px
-  
-.tool-item
-  display: inherit
-  padding-right: 16px
-  align-items: center  
-  img
-    display: block
-    padding: 2px
-    width: 24px
-
+        color:$light-yellow-3
 
 /*************************************/
 /*              Themes               */
@@ -252,7 +277,7 @@
   .call-action
     .action-link
       float: auto
-      margin-bottom: 8px
+      margin-bottom: $size-7
       width: 100%
 
   .tools-section
@@ -260,7 +285,11 @@
     align-items: start
 
   .tool-list
-    margin: 0   
+    margin: 0 
+
+  .skills-card
+    .skill
+      margin: $size-5 $size-1  
       
 
 @media (max-width:$mobile)
@@ -276,5 +305,17 @@
 
   .card-container
     padding: 0 $size-6 0 $size-6 
+
+  .skill-card      
+    width: 232px
+    .card-media
+      width: 232px
+      height: 440px
+      img
+        height: $size-0
+        width: $size-0
+    .card-information
+      width: 296px
+      height: 256px  
 
 /// scroll-behavior: smooth

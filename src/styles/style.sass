@@ -39,9 +39,17 @@ small
   font-size: 0.625rem
   font-weight: normal
 
+.center-text
+  text-align: center
+.primary
+  color: $light-blue-0
+.light
+  color: $light-1  
+
 .container-body
   @include display-flex
-  justify-content: center
+  align-items: center
+  flex-direction: column
   width: 100% 
   height: 100%
   padding-top: $size-0
@@ -52,6 +60,10 @@ small
 
 .main
   width: $large
+  padding: $size-3
+
+footer
+  width: 100vw
   padding: $size-3
     
 /********************/
@@ -69,4 +81,6 @@ small
   h1
     font-size: $size-3
   h2
+    font-size: $size-5
+  h3
     font-size: $size-5

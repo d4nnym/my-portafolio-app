@@ -20,7 +20,7 @@ import pdfCV from '../../assets/file/cv.pdf'
 import imgConstruction1 from '../../assets/img/construction_1.jpg'
 import imgConstruction2 from '../../assets/img/construction_2.jpg'
 import imgConstruction3 from '../../assets/img/construction_3.jpg'
-
+import svgResponsive from '../../assets/svg/responsive.svg'
 export const digitalMedia = {
   isotype:{
     src:svgIsotype,
@@ -132,5 +132,10 @@ export const digitalMedia = {
     src:imgConstruction3,
     title:"Meme 3",
     alt:"construction_3"
+  },
+  responsive:{
+    src:svgResponsive,
+    title: "Resposive Design",
+    alt:"resposive-design"
   }
 }

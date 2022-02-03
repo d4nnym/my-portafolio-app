@@ -9,7 +9,7 @@ export default function Nav({isOpen,handleMenu}){
           <NavLink onClick={isOpen?handleMenu:null} to="/">Inicio</NavLink>
         </li> 
         <li className="nav-item">
-          <NavLink onClick={isOpen?handleMenu:null} to="/about-me">Sobre mi</NavLink>
+          <NavLink onClick={isOpen?handleMenu:null} to={{pathname:"/about-me/",hash:"about-me"}}>Sobre mi</NavLink>
         </li> 
         <li className="nav-item">
           <NavLink onClick={isOpen?handleMenu:null} to="/work">Mis Proyectos</NavLink>
